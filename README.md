@@ -23,14 +23,16 @@ To install the AN environment for running Python scripts, please refer to https:
 ### Overview
 #### Computation end
 ```1-statistics_dFF_comparison_whole dataset.py``` does:
-a. Retrieved time-series data set (```.dic```) of each trials of experiments across folders of 50 genotypes.
 
-b. It overlays the neural activity signals during the same type of behacvioral epochs and iterate this action through differnet types of behavior.
+(a). It retrieves time-series data set (```.dic```) of each trials of experiments across folders of 50 genotypes.
 
-c. It perform ANOVA and Tukey posthoc comparison and output the datafram summarize statistical result (```.pkl```) and the overlaid traces of each behavior period.
+(b). It overlays the neural activity signals during the same type of behacvioral epochs and iterate this action through differnet types of behavior.
+
+(c). It perform ANOVA and Tukey posthoc comparison and output the datafram summarize statistical result (```.pkl```) and the overlaid traces of each behavior period.
 
 ```2-plot_matrix.py```
-a. It read the datafram summarize statistical result (```.pkl```) and output a matrix plot.
+
+(a). It reads the datafram summarize statistical result (```.pkl```) and output a matrix plot.
 
 #### User end
 one can navigate the data structure with graphical user interface to check the intermediate or final analysis results together with other input such as images and neural morphology.
@@ -55,7 +57,7 @@ one can navigate the data structure with graphical user interface to check the i
 
 Finally, ```2-plot_matrix.py``` reads the pickle file of statistical summary (```.pkl```) to output he matrix plots.
 <p align="center">
-  <img align="center" width="780" src="/images/dFF_comparison_statistics_whole_dataset.png">
+  <img align="center" width="900" src="/images/dFF_comparison_statistics_whole_dataset.png">
 </p>
 
 
