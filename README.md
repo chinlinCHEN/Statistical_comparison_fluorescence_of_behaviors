@@ -10,10 +10,10 @@ Note: this repository is to archived the code for easier understanding. It won't
 
 ## Content
 - [Installation](#installation)
-- [Steps](#reproducing-the-figures)
+- [Steps](#steps)
   - [Overview](#overview)
-  - [Statistical comparison with bootstrapping and voting approahces]((#Raw-DLC-predictions-vs.-Denoised-predictions))
-  - [Result visualization]
+  - [Statistical comparison with bootstrapping and voting approahces](#statistical-comparison-with-bootstrapping-and-voting-approahces)
+  - [Result visualization](#result-visualization)
   
 ## Installation
 To install the AN environment for running Python scripts, please refer to https://github.com/NeLy-EPFL/Ascending_neuron_screen_analysis_pipeline/
@@ -23,7 +23,7 @@ To install the AN environment for running Python scripts, please refer to https:
 ### Overview
 #### Computation end
 ```1-statistics_dFF_comparison_whole dataset.py``` does:
-a. Retrieved time-series data set (.dic) of each trials of experiments across folders of 50 genotypes.
+a. Retrieved time-series data set (```.dic```) of each trials of experiments across folders of 50 genotypes.
 
 b. It overlays the neural activity signals during the same type of behacvioral epochs and iterate this action through differnet types of behavior.
 
@@ -39,7 +39,7 @@ one can navigate the data structure with graphical user interface to check the i
   <img align="center" width="780" src="/images/statistic_analysis-data_retrieval_diagram-01.png">
 </p>
 
-### The pipeline of statistical comparison with bootstrapping and voting approahces
+### Statistical comparison with bootstrapping and voting approahces
 1. A baseline of neural activity trace is derived by thresholding with otsu filter if the Shapiro-Wilk normality test of the datapoint distribution reject the null-hypthesis, which indicates that the trace is not background noise but with signals. 
 
 2. ANOVA and Tukey comparison are performed on each group of bootstrapped samples from the datapoint of baseline and different behavioral epochs. This process is iterated 6 times and the significant difference against baseline are used for voting to determine if the cell significantly activate during each behavioral epochs. The significance test would pass if the voting is higher than 50%. 
@@ -53,7 +53,7 @@ one can navigate the data structure with graphical user interface to check the i
 
 ### Result visualization
 
-Finally, ```2-plot_matrix.py``` reads the pickle file of statistical summary ('''.pkl''') to output he matrix plots.
+Finally, ```2-plot_matrix.py``` reads the pickle file of statistical summary (```.pkl```) to output he matrix plots.
 <p align="center">
   <img align="center" width="780" src="/images/dFF_comparison_statistics_whole_dataset.png">
 </p>
